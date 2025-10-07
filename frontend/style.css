@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #444;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.lift-shaft {
+    position: relative;
+    width: 150px;
+    height: 600px;
+    background-color: #ccc;
+    border: 2px solid #555;
+    overflow: hidden;
+}
+
+.floors {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.floor-label {
+    height: 60px; /* 600px / 10 floors */
+    box-sizing: border-box;
+    border-bottom: 1px dashed #777;
+    text-align: center;
+    line-height: 60px;
+    font-size: 14px;
+    color: #555;
+}
+
+.lift {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.pod {
+    width: 80px;
+    height: 50px;
+    background-color: #f5a623;
+    border: 1px solid #d08c1d;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 1s ease-in-out;
+}
+
+.pod.moving {
+    background-color: #d0021b;
+}
+
+.pod.at-floor {
+    background-color: #4a90e2;
+}
+
+.controls {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#delivery-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#delivery-form input, #delivery-form button {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+#delivery-form button {
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+#delivery-form button:hover {
+    background-color: #4cae4c;
+}
+
+.status-board {
+    margin-top: 20px;
+}
+
+#delivery-queue {
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#delivery-queue li {
+    background-color: #f9f9f9;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+#delivery-queue li:last-child {
+    border-bottom: none;
+}
