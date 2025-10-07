@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Smart Delivery Lift System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>AI Smart Delivery Lift System - Simulation</h1>
+
+    <div class="container">
+        <div class="lift-shaft">
+            <div class="lift" id="lift">
+                <!-- Pods will be dynamically added here -->
+            </div>
+            <div class="floors" id="floors">
+                <!-- Floor numbers will be dynamically added here -->
+            </div>
+        </div>
+
+        <div class="controls">
+            <h2>Security Gate Control</h2>
+            <form id="delivery-form">
+                <input type="number" id="floor-input" placeholder="Enter Floor (1-10)" min="1" max="10" required>
+                <input type="text" id="package-input" placeholder="Package Name" required>
+                <button type="submit">Dispatch Delivery</button>
+            </form>
+
+            <div class="status-board">
+                <h2>System Status</h2>
+                <p><strong>Lift Status:</strong> <span id="lift-status">idle</span></p>
+                <h3>Delivery Queue</h3>
+                <ul id="delivery-queue">
+                    <!-- Queue items will be dynamically added here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
